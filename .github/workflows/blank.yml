@@ -15,14 +15,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: prime-cache-235f36d
-        id: cache-step
+        id: cache_step
         uses: actions/cache@v4
         with:
-          path: ~/.cache/my-dependencies   # change this to your actual dependencies folder if needed
+          path: ~/.cache/my-dependencies
           key: cache-235f36d
 
       - name: Show cache result
-        run: echo "Cache hit: ${{ steps.cache-step.outputs.cache-hit }}"
+        run: 'echo "Cache hit: ${{ steps.cache_step.outputs.cache-hit }}"'
 
       - name: 23f2000091@ds.study.iitm.ac.in
         run: echo Hello, world!
